@@ -1,21 +1,18 @@
-testValue: hello
-
-# spring:
-#   kafka:
-#     bootstrap-servers: pkc-lq8v7.eu-central-1.aws.confluent.cloud:9092
-#     producer:
-#       key-serializer: org.apache.kafka.common.serialization.StringSerializer
-#       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
-#     consumer:
-#       group-id: web-002e4788-2e80-45bc-997b-168a58d81239
-#       auto-offset-reset: earliest
-#       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-#       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-#       properties:
-#         spring:
-#           json:
-#             trusted:
-#               packages: domain
-# app:
-#   topic:
-#     RTDSTopic: RTDS_1
+kafka:
+  bootstrap-servers: localhost:9092
+  producer:
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+  consumer:
+    group-id: gid
+    auto-offset-reset: earliest
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    properties:
+      spring:
+        json:
+          trusted:
+            packages: domain
+app:
+  topic:
+    RTDSTopic: RTDS_1
