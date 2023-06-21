@@ -1,4 +1,4 @@
-testValue: "hello"
+testValue: hello
 
 # spring:
 #   kafka:
